@@ -1,0 +1,36 @@
+.subscribe {
+  // margin-bottom: 65px;
+  transform: translateY(50%);
+  &-container {
+    padding: 60px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white-color;
+    border-radius: 10px;
+    box-shadow: 0 33.5px 57px 0 rgba(13, 16, 37, 0.06);
+  }
+  &-content {
+    width: 372px;
+  }
+  &-button {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+  &-text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .subscribe {
+    &-container {
+      padding-top: 0;
+      flex-direction: column;
+      text-align: center;
+    }
+    .text {
+      margin-bottom: 20px;
+    }
+  }
+}

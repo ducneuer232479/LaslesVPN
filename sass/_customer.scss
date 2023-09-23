@@ -1,0 +1,139 @@
+.customer {
+  // padding-bottom: 200px;
+  &-list.slick-slider {
+    position: relative;
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      outline: none;
+      border: none;
+      border-radius: 100rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border: 1px solid $primary-color;
+      transform: translateY(50%);
+      z-index: 10;
+    }
+    .slick-prev {
+      right: 80px;
+      background-color: #fff;
+      i {
+        font-size: 20px;
+        color: $primary-color;
+      }
+    }
+    .slick-next {
+      background-color: $primary-color;
+      i {
+        font-size: 20px;
+        color: $white-color;
+      }
+    }
+  }
+  &-item {
+    margin-right: 50px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    display: flex !important;
+    flex-direction: column;
+  }
+  &-top,
+  &-info,
+  &-rating {
+    display: flex;
+    align-items: center;
+  }
+  &-top {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &-info {
+    gap: 0 20px;
+  }
+  &-rating {
+    gap: 0 10px;
+    img {
+      padding-bottom: 3px;
+    }
+  }
+  &-avatar {
+    width: 50px;
+    height: 50px;
+  }
+  &-name {
+    font-size: 18px;
+    color: $heading-color;
+    line-height: 1;
+  }
+  &-review {
+    color: $heading-color;
+    margin-bottom: auto;
+  }
+  .slick-track {
+    display: flex !important;
+    padding-bottom: 60px;
+  }
+
+  .slick-slide {
+    height: inherit;
+    width: 400px;
+  }
+  .slick-dots {
+    display: flex;
+    align-items: center;
+    transform: translateY(50%);
+    gap: 0 15px;
+    button {
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      border-radius: 100rem;
+      outline: none;
+      border: none;
+      background-color: #dde0e4;
+      transition: all 0.3s linear;
+    }
+    .slick-active button {
+      width: 45px;
+      background-color: $primary-color;
+    }
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .customer {
+    &-item {
+      margin: 0 25px;
+    }
+    &-list {
+      .slick-prev,
+      .slick-next {
+        display: none !important;
+      }
+    }
+    .slick-track {
+      padding-bottom: 30px;
+    }
+    .slick-dots {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .customer {
+    &-item {
+      margin-right: 0;
+    }
+    .slick-slide {
+      width: 300px;
+    }
+  }
+}

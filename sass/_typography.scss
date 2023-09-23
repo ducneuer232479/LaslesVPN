@@ -1,0 +1,24 @@
+.text-medium {
+  font-weight: 500;
+}
+
+.text-16 {
+  font-size: 16px;
+}
+
+.heading {
+  color: $heading-color;
+  font-family: $font;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: calc(50 / 35);
+  margin-bottom: 20px;
+}
+
+.text {
+  color: $text-color;
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: calc(30 / 14);
+}

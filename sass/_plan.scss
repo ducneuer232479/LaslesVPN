@@ -1,0 +1,106 @@
+.plan {
+  padding: 80px 0 30px;
+  background: $gray-lighter-color;
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 0 50px;
+    margin-bottom: 150px;
+  }
+  &-item {
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    background-color: $white-color;
+    padding: 80px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3 linear;
+    &:hover {
+      border-color: $primary-color;
+    }
+  }
+  &-item.is-active {
+    border-color: $primary-color;
+    .plan-button {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+  &-button {
+    padding-left: 63px;
+    padding-right: 63px;
+  }
+  &-image {
+    margin-bottom: 30px;
+  }
+  &-title {
+    font-size: 18px;
+    color: $heading-color;
+    margin-bottom: 30px;
+  }
+  &-info {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+  }
+  &-details {
+    margin-bottom: 50px;
+  }
+  &-price {
+    margin-top: auto;
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: $heading-color;
+    line-height: calc(30 / 25);
+    .text {
+      font-size: 25px;
+      color: $text-color;
+      line-height: calc(30 / 25);
+    }
+  }
+  .network-image {
+    padding-top: 95px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .plan {
+    padding: 50px 0;
+
+    &-info {
+      gap: 0 10px;
+    }
+    .network-image {
+      padding-top: 30px;
+    }
+  }
+  .plan-list {
+    margin-bottom: 80px;
+    display: grid;
+    justify-content: flex-start;
+    grid-auto-columns: 300px;
+    grid-auto-flow: column;
+    grid-gap: 1.5rem;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 1rem;
+    grid-template-columns: unset;
+  }
+  .plan-list::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+  .plan-list > * {
+    scroll-snap-align: start;
+  }
+}

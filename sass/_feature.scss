@@ -1,0 +1,40 @@
+.feature {
+  padding-bottom: 126px;
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0 85px;
+  }
+
+  &-desc {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+
+    gap: 0 10px;
+  }
+  &-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feature-content {
+    max-width: 430px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .feature-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px 0;
+  }
+  .heading {
+    font-size: 30px;
+  }
+}
